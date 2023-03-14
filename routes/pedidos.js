@@ -9,4 +9,14 @@ router.post('/',  (req, res) => {
     PedidosController.create(req, res);
 });
 
+router.delete('/deletar/:id',  (req, res) => {
+    PedidosController.deleteOne(req, res);
+});
+
+router.put('/:id', (req, res) => {
+    console.log("Rota de update ", req.params.id);
+    PedidosController.updateOne(req, res);
+});
+
+
 module.exports = router;

@@ -7,4 +7,16 @@ module.exports = class Pedido {
       return pedido;
   }
 
+  async deleteOne(_idPedido) {
+    const pedido = await modelPedido.deleteOne({_id: _idPedido});
+    return pedido;
+  }
+
+  async updateOne(_idPedido, body) {
+    const pedido = await modelPedido.updateOne({_id: _idPedido}, {$set: body});
+    return pedido;
+}
+
+
+
 };

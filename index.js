@@ -15,13 +15,14 @@ app.set('view engine', 'ejs');
 
 app.get('/home', (req, res) => {
    res.render('index.ejs', {
-      aluno: "Wagner Frana",
+      aluno: "Alan",
       aulas: ["Javascript", "NodeJS"]
    })
 });
 
-const pedidosRoutes = require('./routes/pedidos'); //require do arquivo de rotas dos usuarios
-app.use('/pedidos', pedidosRoutes); //definição do arquivo de rotas dos usuarios
+const pedidosRoutes = require('./routes/pedidos'); //  Rota para fazer pedidos, ok
+app.use('/pedidos', pedidosRoutes); 
+
 
 /*const carrosRoutes = require('./routes/carros'); //require do arquivo de rotas dos carros
 app.use('/carros', carrosRoutes); //definição do arquivo de rotas dos carros*/
