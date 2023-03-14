@@ -17,8 +17,8 @@ module.exports = class Pedido {
     return pedido;
 }
 
-async findOne(_idUsuario) {
-  const pedido = await modelPedido.findOne({_id: _idUsuario});
+async findOne(_idPedido) {
+  const pedido = await modelPedido.findOne({_id: _idPedido});
   return pedido;
 }
 

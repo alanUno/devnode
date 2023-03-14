@@ -23,6 +23,9 @@ app.get('/home', (req, res) => {
 const pedidosRoutes = require('./routes/pedidos'); //  Rota para fazer pedidos, ok
 app.use('/pedidos', pedidosRoutes); 
 
+const produtosRoutes = require('./routes/produtos'); //  Rota para fazer pedidos, ok
+app.use('/produtos', produtosRoutes); 
+
 
 /*const carrosRoutes = require('./routes/carros'); //require do arquivo de rotas dos carros
 app.use('/carros', carrosRoutes); //definição do arquivo de rotas dos carros*/
