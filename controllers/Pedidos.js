@@ -18,6 +18,11 @@ module.exports = class Pedidos {
         res.json(retorno);
     }
 
+    async findOne(req, res) {
+        const retorno = await PedidoService.findOne(req.params.id);
+        res.json(retorno);
+    }
+
 
 
 };

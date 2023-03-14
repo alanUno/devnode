@@ -18,5 +18,8 @@ router.put('/:id', (req, res) => {
     PedidosController.updateOne(req, res);
 });
 
+router.get('/:id', (req, res) => {
+    PedidosController.findOne(req, res);
+});
 
 module.exports = router;
