@@ -4,7 +4,9 @@ const passportJWT = require("passport-jwt");
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
 
-const modelUsuario = require('../models/pedido');
+const modelPedido = require('../models/pedido');
+const modelProduto = require('../models/produto');
+
 
 passport.use('jwt-dev-evolution', new JWTStrategy({
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
