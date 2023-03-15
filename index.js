@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const jwt = require('jsonwebtoken'); //importa a biblioteca de token JWT
-const usuarios = require('./usuarios.json');
+const usuarios = require('./models/usuario');
 
 const app = express();
 
@@ -22,11 +22,14 @@ app.get('/home', (req, res) => {
    })
 });
 
-const pedidosRoutes = require('./routes/pedidos'); //  Rota para fazer pedidos, ok
+const pedidosRoutes = require('./routes/pedidos'); 
 app.use('/pedidos', pedidosRoutes); 
 
-const produtosRoutes = require('./routes/produtos'); //  Rota para fazer pedidos, ok
+const produtosRoutes = require('./routes/produtos'); 
 app.use('/produtos', produtosRoutes); 
+
+const usuariosRoutes = require('./routes/usuarios'); 
+app.use('/usuarios', usuariosRoutes);
 
 
 /*const carrosRoutes = require('./routes/carros'); //require do arquivo de rotas dos carros
