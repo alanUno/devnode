@@ -1,5 +1,4 @@
 const modelPedido = require('../models/pedido');
-
 module.exports = class Pedido {
 
   async create(body) {
@@ -15,12 +14,10 @@ module.exports = class Pedido {
   async updateOne(_idPedido, body) {
     const pedido = await modelPedido.updateOne({_id: _idPedido}, {$set: body});
     return pedido;
-}
+  }
 
-async findOne(_idPedido) {
-  const pedido = await modelPedido.findOne({_id: _idPedido});
-  return pedido;
-}
-
-
+  async findOne(_idPedido) {
+    const pedido = await modelPedido.getPedidoComProdutos(_idPedido);
+    return pedido;
+  }
 };

@@ -3,6 +3,7 @@ const router = express.Router();
 
 const ProdutosController = new (require('../controllers/Produtos'));
 
+
 const validate = require('../auth/validate');
 
 router.post('/',  (req, res) => {
