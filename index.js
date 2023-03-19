@@ -43,6 +43,10 @@ app.post('/auth', async (req, res) => { // adiciona o modificador async para pod
    res.send({ token });
 });
 
+const populateRoutes = require("./routes/populate");
+app.use("/populate", populateRoutes);
+
+
 app.listen(3000, () => {
    console.log("Aplicacao rodando!");
 });
