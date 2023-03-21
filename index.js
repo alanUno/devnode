@@ -14,13 +14,6 @@ app.use('/teste', express.static('public'));
 
 app.set('view engine', 'ejs');
 
-app.get('/home', (req, res) => {
-   res.render('index.ejs', {
-      aluno: "Alan",
-      aulas: ["Javascript", "NodeJS"]
-   })
-});
-
 const pedidosRoutes = require('./routes/pedidos');
 app.use('/pedidos', pedidosRoutes);
 
@@ -38,7 +31,7 @@ app.post('/auth', async (req, res) => { // adiciona o modificador async para pod
      return res.status(401).send('Usuário não encontrado ou senha inválida');
    }
 
-   const token = jwt.sign({ email }, 'chave-secreta-do-token');
+   const token = jwt.sign({ email }, 'jwt-dev-evolution');
 
    res.send({ token });
 });

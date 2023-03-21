@@ -6,11 +6,12 @@ const ExtractJWT = passportJWT.ExtractJwt;
 
 const modelPedido = require('../models/pedido');
 const modelProduto = require('../models/produto');
+const modelUsuario = require('../models/usuario');
 
 
 passport.use('jwt-dev-evolution', new JWTStrategy({
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-    secretOrKey: 'senhasecreta'
+    secretOrKey: 'jwt-dev-evolution'
 }, (payload, done) => {
 
     console.log(payload)
