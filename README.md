@@ -26,4 +26,6 @@ Buscar específico: http://localhost:3000/pedidos/:id GET
 Deletar: http://localhost:3000/pedidos/deletar/:id DELETE - Deleta o id informado
 Atualizar: http://localhost:3000/pedidos/:id PUT - Atualiza o produto com o id informado
 
+6 - A rota http://localhost:3000/quantidade GET - retorna a quantidade de pedidos e produtos existentes
+
 *Sobre a autenticação, como estava com problema na 'chave secreta', tirei das rotas para ser possível fazer acesso

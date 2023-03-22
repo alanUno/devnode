@@ -38,6 +38,8 @@ app.post('/auth', async (req, res) => {
 const populateRoutes = require("./routes/populate");
 app.use("/populate", populateRoutes);
 
+const quantidadeRoutes = require("./routes/quantidade");
+app.use("/quantidade", quantidadeRoutes);
 
 app.listen(3000, () => {
    console.log("Aplicacao rodando!");
