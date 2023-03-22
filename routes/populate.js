@@ -5,9 +5,9 @@ const ProdutoModel = require("../models/produto");
 router.post("/", async (req, res) => {
   try {
     const produtos = [
-      { nome: "Produto 1", preco: 10.0 },
-      { nome: "Produto 2", preco: 20.0 },
-      { nome: "Produto 3", preco: 30.0 },
+      { nome: "Maça", preco: 10.0 },
+      { nome: "Banana", preco: 20.0 },
+      { nome: "Laranja", preco: 30.0 },
     ];
 
     await ProdutoModel.insertMany(produtos);
