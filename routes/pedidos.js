@@ -22,4 +22,8 @@ router.get('/:id', (req, res) => {
     PedidosController.findOne(req, res);
 });
 
-module.exports = router;
+router.get('/', (req, res) => {
+    PedidosController.findAll(req, res);
+}); 
+
+module.exports = router; 

@@ -23,6 +23,9 @@ module.exports = class Pedidos {
         res.json(retorno);
     }
 
+    async findAll(req, res) {
+        const retorno = await PedidoService.findAll();
+        res.json(retorno);
+    }
 
-
-};
+}; 

@@ -8,7 +8,7 @@ const pedidoSchema = mongoose.Schema({
 pedidoSchema.statics.getPedidoComProdutos = function (id) {
   return this.aggregate([
     {
-      $match: { _id: mongoose.Types.ObjectId(id) }
+      $match: { _id: new mongoose.Types.ObjectId(id) }
     },
     {
       $lookup: {

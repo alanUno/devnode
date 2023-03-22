@@ -20,4 +20,9 @@ module.exports = class Pedido {
     const pedido = await modelPedido.getPedidoComProdutos(_idPedido);
     return pedido;
   }
-};
+
+  async findAll() {
+    const pedido = await modelPedido.find({});
+    return pedido;
+}
+}; 

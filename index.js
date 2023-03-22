@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const jwt = require('jsonwebtoken');
 const usuarioModel = require('./models/usuario');
+process.env.DEBUG = 'app:*';
 
 const app = express();
 

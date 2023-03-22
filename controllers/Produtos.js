@@ -27,4 +27,4 @@ module.exports = class Produtos {
         const retorno = await ProdutoService.findAll();
         res.json(retorno);
     }
-};
+}; 
