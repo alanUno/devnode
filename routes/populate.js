@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const passport = require("../auth/validate");
 const ProdutoModel = require("../models/produto");
 
-router.post("/", passport.authenticate("jwt-dev-evolution", { session: false }), async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const produtos = [
       { nome: "Produto 1", preco: 10.0 },

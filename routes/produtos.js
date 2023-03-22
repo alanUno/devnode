@@ -23,4 +23,8 @@ router.get('/:id', (req, res) => {
     ProdutosController.findOne(req, res);
 }); 
 
+router.get('/', (req, res) => {
+    ProdutosController.findAll(req, res);
+}); 
+
 module.exports = router;

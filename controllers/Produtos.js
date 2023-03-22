@@ -8,11 +8,11 @@ module.exports = class Produtos {
         res.json(retorno);
     }
 
-  async deleteOne(req, res) {
+    async deleteOne(req, res) {
         const retorno = await ProdutoService.deleteOne(req.params.id);
         res.json(retorno);
     }
- 
+
     async updateOne(req, res) {
         const retorno = await ProdutoService.updateOne(req.params.id, req.body);
         res.json(retorno);
@@ -23,5 +23,8 @@ module.exports = class Produtos {
         res.json(retorno);
     }
 
-
+    async findAll(req, res) {
+        const retorno = await ProdutoService.findAll();
+        res.json(retorno);
+    }
 };

@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const jwt = require('jsonwebtoken');
-const usuarioModel = require('./models/usuario'); // importa o modelo do usuário
+const usuarioModel = require('./models/usuario');
 
 const app = express();
 
@@ -23,10 +23,9 @@ app.use('/produtos', produtosRoutes);
 const usuariosRoutes = require('./routes/usuarios');
 app.use('/usuarios', usuariosRoutes);
 
-app.post('/auth', async (req, res) => { // adiciona o modificador async para poder usar await
+app.post('/auth', async (req, res) => { 
    const { email, senha } = req.body;
-   const usuario = await usuarioModel.findOne({ email, senha }); // busca o usuário utilizando o modelo do Mongoose e o método findOne()
-
+   const usuario = await usuarioModel.findOne({ email, senha });
    if (!usuario) {
      return res.status(401).send('Usuário não encontrado ou senha inválida');
    }
